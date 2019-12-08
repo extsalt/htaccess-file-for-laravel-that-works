@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+    DocumentRoot "/opt/bitnami/apache2/htdocs/story/public"
+    ServerName story.com
+    ServerAlias www.story.com
+  	  <Directory "/opt/bitnami/apache2/htdocs/story/public">
+             Options FollowSymLinks MultiViews
+             ReWriteEngine On
+             AllowOverride All
+             Require all granted
+         </Directory>
+</VirtualHost>
